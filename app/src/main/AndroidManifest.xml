@@ -13,7 +13,33 @@
         android:theme="@style/Theme.KALENDEREVENT"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.splashscreen.SplashscreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.seacrh.SearchActivity"
+            android:exported="false"
+            android:label="@string/title_activity_search"
+            android:theme="@style/Theme.KALENDEREVENT" />
+        <activity
+            android:name=".presentation.pendaftaran.DaftarEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.notif.NotifikasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.etiket.eTiketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.detail.DetailEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.auth.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.auth.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

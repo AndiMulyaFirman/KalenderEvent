@@ -1,7 +1,8 @@
-package com.kominfo.kalenderevent
+package com.kominfo.kalenderevent.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kominfo.kalenderevent.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
