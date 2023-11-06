@@ -13,9 +13,6 @@
         android:theme="@style/Theme.KALENDEREVENT"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.splashscreen.SplashscreenActivity"
-            android:exported="false" />
-        <activity
             android:name=".presentation.seacrh.SearchActivity"
             android:exported="false"
             android:label="@string/title_activity_search"
@@ -40,7 +37,11 @@
             android:exported="false" />
         <activity
             android:name=".presentation.main.MainActivity"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".presentation.splashscreen.SplashscreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
