@@ -1,12 +1,12 @@
-package com.kominfo.kalenderevent.presentation.auth.login
+package com.kominfo.kalenderevent.presentation.kalender
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kominfo.kalenderevent.R
 
-class LoginActivity : AppCompatActivity() {
+class KalenderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_kalender)
     }
 }

@@ -1,18 +1,15 @@
 package com.kominfo.kalenderevent.presentation.main
 
-import android.content.Intent
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kominfo.kalenderevent.R
 import com.kominfo.kalenderevent.presentation.home.HomeFragment
 import com.kominfo.kalenderevent.presentation.profil.ProfilFragment
-import com.kominfo.kalenderevent.presentation.seacrh.SearchFragment
-import com.kominfo.kalenderevent.presentation.tambahEvent.TambahEventFragment
 import com.kominfo.kalenderevent.presentation.tiketSaya.TiketSayaFragment
 
 class MainActivity : AppCompatActivity() {
@@ -25,21 +22,20 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
             return
         }
-
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "Tekan lagi untuk keluar", Toast.LENGTH_SHORT).show()
 
         Handler().postDelayed({ doubleBackToExitPressedOnce = false }, TOAST_DURATION.toLong())
     }
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         bottomNavigationView.background = null
-        bottomNavigationView.menu.getItem(2).isEnabled = false
+        bottomNavigationView.menu.getItem(2).isEnabled = true
 
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -47,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(HomeFragment())
                     true
                 }
-
                 R.id.miTiketSaya -> {
                     replaceFragment(TiketSayaFragment())
                     true
@@ -56,14 +51,9 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(ProfilFragment())
                     true
                 }
-
-
                 else -> false
             }
         }
-
-
-        // Set the default selected menu item
         bottomNavigationView.selectedItemId = R.id.miHome
     }
 

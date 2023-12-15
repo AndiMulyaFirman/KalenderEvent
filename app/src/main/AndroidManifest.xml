@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +15,27 @@
         android:theme="@style/Theme.KALENDEREVENT"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.kontak.KontakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.auth.AuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.kalender.KalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profil.DetailProfilActivity"
+            android:exported="false"
+            android:label="@string/title_activity_detail_profil"
+            android:theme="@style/Theme.KALENDEREVENT" />
+        <activity
             android:name=".presentation.seacrh.SearchActivity"
             android:exported="false"
             android:label="@string/title_activity_search"
             android:theme="@style/Theme.KALENDEREVENT" />
+        <activity
+            android:name=".presentation.detail.DetailActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.pendaftaran.DaftarEventActivity"
             android:exported="false" />
@@ -25,15 +44,6 @@
             android:exported="false" />
         <activity
             android:name=".presentation.etiket.eTiketActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.detail.DetailEventActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.auth.register.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.auth.login.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.main.MainActivity"

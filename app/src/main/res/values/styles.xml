@@ -1,7 +1,19 @@
 <resources>
-
     <style name="Widget.Theme.KALENDEREVENT.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="ButtonTextStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BtnStyleYa" parent="Widget.Material3.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="backgroundTint">#0A84FF</item>
+    </style>
+    <style name="BtnStyleTidak" parent="Widget.Material3.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="backgroundTint">#C1C1C1</item>
     </style>
 </resources>

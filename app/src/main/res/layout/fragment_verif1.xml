@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recCard"
+        android:layout_width="308dp"
+        android:layout_height="205dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Close Button (X) -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:tint="#00D1AC" />
+
+        <!-- Exclamation Icon -->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/seru"
+            app:layout_constraintBottom_toTopOf="@id/confirmTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Confirmation Text -->
+        <TextView
+            android:id="@+id/confirmTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/iconImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Additional Information Text -->
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apakah data yang anda isi sudah benar?"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/confirmTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Yes Button -->
+        <Button
+            android:id="@+id/yesButton"
+            style="@style/BtnStyleYa"
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/bg_btn_ya"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="Ya"
+            app:layout_constraintEnd_toStartOf="@+id/noButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoTextView" />
+
+        <!-- No Button -->
+        <Button
+            android:id="@+id/noButton"
+            style="@style/BtnStyleTidak"
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="93dp"
+            android:background="@drawable/bg_btn_tidak"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="Tidak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

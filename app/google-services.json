@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "191298308932",
+    "project_id": "kalender-event-1c158",
+    "storage_bucket": "kalender-event-1c158.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191298308932:android:0fc40ba28a6d6c15276511",
+        "android_client_info": {
+          "package_name": "com.kominfo.kalenderevent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDctmSi3Y21cDcYjl7OFbqwWmZnFnjqeRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
